@@ -1,0 +1,243 @@
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: silver;
+}
+
+.texto {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 5%;
+    border: none;
+    font-family: cursive;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: lavender;
+    border-radius: 15px;
+}
+
+.texto::placeholder{
+    color: blue;
+}
+
+.texto:focus,.texto:active{
+    border: none;
+    outline: none;
+}
+
+.terminos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.terminos p{
+    font-family: 'inter';
+    font-weight: bolder;
+    line-height: 0%;
+    flex: none;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.boton-encriptar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8%;
+    width: 25%;
+    background: blue;
+    border: 1px solid white;
+    border-radius: 24px;
+    font-family: 'inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.boton-desencriptar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8%;
+    width: 25%;
+    background: blue;
+    border: 1px solid white;
+    border-radius: 24px;
+    font-family: 'inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#boton-copiar {
+    box-sizing: border-box;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    border-radius: 24px;
+    padding: 2%;
+    font-family: 'inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#boton-copiar:hover {
+    box-sizing: border-box;
+    background-color: darkblue;
+}
+
+.boton-copiar{
+    width: 25%;
+    background: blue;
+    position: absolute;
+    right: 8%
+}
+
+.boton-encriptar:hover,.boton-desencriptar:hover, .boton-copiar:hover{
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+    background-color: darkblue;
+}
+
+.encriptado{
+    position: absolute;
+    left: 60%;
+    top: 5%;
+}
+
+.mensaje-encriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensaje-encriptado h2{
+    width: 60%;
+    font-family: 'inetr';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: grey;
+}
+
+.mensaje-encriptado p{
+    width: 80%;
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: grey;
+}
+
+.img{
+    width: 82%;
+    height: 363px;
+    border-radius: 15px;
+}
+
+@media (max-width: 57.5em) {
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar{
+        width: 100%;
+    }
+    .texto{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+    .terminos{
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+    .terminos p{
+        font-size: 16px;
+    }
+    .botones{
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+    .boton-encriptar, .boton-desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+    .boton-encriptar:hover, .boton-desencriptar:hover{
+        margin: 0.3%;
+        width: 47%;
+        padding: auto;
+    }
+
+    .encriptado{
+        width: 70%;
+        height: 10%;
+        left: auto;
+        top: auto;
+    }
+
+    .mensaje-encriptado{
+        width: 100%;
+        top: auto;
+    }
+
+    .encriptado img{
+        top: auto;
+        display: none;
+        visibility: hidden;
+    }
+}
